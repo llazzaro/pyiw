@@ -2,7 +2,12 @@
 Python 2.6 doesn't provide subprocess.check_output or subprocess.check_call
 """
 
-from subprocess import *
+from subprocess import (
+    Popen,
+    CalledProcessError,
+    call,
+    PIPE
+)
 
 try:
     check_output

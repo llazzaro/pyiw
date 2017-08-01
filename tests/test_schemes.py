@@ -2,9 +2,9 @@ from unittest import TestCase
 import tempfile
 import os
 
-from wifi import Cell
-from wifi.scheme import extract_schemes, Scheme
-from wifi.exceptions import ConnectionError
+from pyiw import Cell
+from pyiw.scheme import extract_schemes, Scheme
+from pyiw.exceptions import ConnectionError
 
 
 NETWORK_INTERFACES_FILE = """

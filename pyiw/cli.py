@@ -4,9 +4,9 @@ import argparse
 import sys
 import os
 
-from wifi import Cell, Scheme
-from wifi.utils import print_table, match as fuzzy_match
-from wifi.exceptions import ConnectionError, InterfaceError
+from pyiw import Cell, Scheme
+from pyiw.utils import print_table, match as fuzzy_match
+from pyiw.exceptions import ConnectionError, InterfaceError
 
 try:  # Python 2.x
     input = raw_input

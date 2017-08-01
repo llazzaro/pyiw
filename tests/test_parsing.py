@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from wifi.scan import Cell
-from wifi.exceptions import InterfaceError
+from pyiw.scan import Cell
+from pyiw.exceptions import InterfaceError
 
 
 class IWListParserTest(TestCase):
@@ -86,7 +86,7 @@ class ScanningTest(TestCase):
 IWLIST_SCAN_NO_ENCRYPTION = """Cell 02 - Address: 38:83:45:CC:58:74
                     Channel:6
                     Frequency:2.437 GHz (Channel 6)
-                    Quality=59/70  Signal level=-51 dBm  
+                    Quality=59/70  Signal level=-51 dBm
                     Encryption key:off
                     ESSID:"My Wireless Network"
                     Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
@@ -112,7 +112,7 @@ IWLIST_SCAN_NO_ENCRYPTION = """Cell 02 - Address: 38:83:45:CC:58:74
 IWLIST_SCAN_WEP = """Cell 01 - Address: 00:21:27:35:1B:E8
                     Channel:6
                     Frequency:2.437 GHz (Channel 6)
-                    Quality=36/70  Signal level=-74 dBm  
+                    Quality=36/70  Signal level=-74 dBm
                     Encryption key:on
                     ESSID:"WEP Network"
                     Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
@@ -134,7 +134,7 @@ IWLIST_SCAN_WEP = """Cell 01 - Address: 00:21:27:35:1B:E8
 IWLIST_SCAN_WPA2 = """Cell 08 - Address: 00:22:B0:98:5E:77
                     Channel:1
                     Frequency:2.412 GHz (Channel 1)
-                    Quality=42/70  Signal level=-68 dBm  
+                    Quality=42/70  Signal level=-68 dBm
                     Encryption key:on
                     ESSID:"WPA2 network"
                     Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 9 Mb/s
@@ -169,7 +169,7 @@ IWLIST_SCAN_WPA2 = """Cell 08 - Address: 00:22:B0:98:5E:77
                     IE: Unknown: DD750050F204104A00011010440001021041000100103B00010310470010C59BF13CE0C57AA1476C0022B0985E7710210006442D4C696E6B102300074449522D363035102400074449522D3630351042000830303030303030301054000800060050F2040001101100074449522D36303510080002008E
 """
 
-IWLIST_SCAN_WPA1 = """Cell 01 - Address: 
+IWLIST_SCAN_WPA1 = """Cell 01 - Address:
                     ESSID:
                     Protocol:IEEE 802.11bg
                     Mode:Master
@@ -181,7 +181,7 @@ IWLIST_SCAN_WPA1 = """Cell 01 - Address:
                         Group Cipher : TKIP
                         Pairwise Ciphers (1) : TKIP
                         Authentication Suites (1) : PSK
-                    Quality=100/100  Signal level=74/100  
+                    Quality=100/100  Signal level=74/100
 """
 
 ALTERNATIVE_OUTPUT = """Cell 06 - Address: F2:23:DB:A3:3B:A0
@@ -231,10 +231,10 @@ NONAME_WIRELESS_NETWORK = """Cell 01 - Address: A4:56:30:E8:97:F0
                         Group Cipher : TKIP
                         Pairwise Ciphers (2) : TKIP CCMP
                         Authentication Suites (1) : PSK
-                    Quality=84/100  Signal level=43/100  
+                    Quality=84/100  Signal level=43/100
 """
 
-NO_CHANNEL_OUTPUT = """Cell 06 - Address: 
+NO_CHANNEL_OUTPUT = """Cell 06 - Address:
                     ESSID:
                     Protocol:IEEE 802.11bgn
                     Mode:Master
@@ -246,7 +246,7 @@ NO_CHANNEL_OUTPUT = """Cell 06 - Address:
                         Group Cipher : CCMP
                         Pairwise Ciphers (1) : CCMP
                         Authentication Suites (1) : PSK
-                    Quality=93/100  Signal level=10/100 
+                    Quality=93/100  Signal level=10/100
 """
 
 LIST_INDEX_ERROR = """Cell 04 - Address: 50:06:04:C3:4D:93
@@ -295,7 +295,7 @@ ABSOLUTE_QUALITY = """Cell 04 - Address: 50:06:04:C3:4D:93
 NO_SSID_AT_ALL = """Cell 10 - Address: 02:CA:FE:CA:CA:40
                     Channel:5
                     Frequency:2.432 GHz (Channel 5)
-                    Quality=61/70  Signal level=-49 dBm  
+                    Quality=61/70  Signal level=-49 dBm
                     Encryption key:on
                     Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
                               9 Mb/s; 12 Mb/s; 18 Mb/s

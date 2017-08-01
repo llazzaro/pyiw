@@ -3,9 +3,9 @@ from __future__ import division
 import re
 import textwrap
 
-import wifi.subprocess_compat as subprocess
-from wifi.utils import db2dbm
-from wifi.exceptions import InterfaceError
+import pyiw.subprocess_compat as subprocess
+from pyiw.utils import db2dbm
+from pyiw.exceptions import InterfaceError
 
 
 class Cell(object):

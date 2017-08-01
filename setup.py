@@ -19,28 +19,20 @@ install_requires = [
 ]
 try:
     import argparse
-except:
+except ImportError:
     install_requires.append('argparse')
 
 version = '1.0.0'
 
 should_install_cli = os.environ.get('WIFI_INSTALL_CLI') not in ['False', '0']
-command_name = os.environ.get('WIFI_CLI_NAME', 'wifi')
-
-if command_name == 'wifi.py':
-    print(
-        "Having a command name of wifi.py will result in a weird ImportError"
-        " that doesn't seem possible to work around. Pretty much any other"
-        " name seems to work though."
-    )
-    sys.exit(1)
+command_name = os.environ.get('WIFI_CLI_NAME', 'pyiw')
 
 entry_points = {}
 data_files = []
 
 if should_install_cli:
     entry_points['console_scripts'] = [
-        '{command} = wifi.cli:main'.format(command=command_name),
+        '{command} = pyiw.cli:main'.format(command=command_name),
     ]
     # make sure we actually have write access to the target folder and if not don't
     # include it in data_files
@@ -50,13 +42,13 @@ if should_install_cli:
         print("Not installing bash completion because of lack of permissions.")
 
 setup(
-    name='wifi',
+    name='pyiw',
     version=version,
     author='Rocky Meza, Gavin Wahl',
     author_email='rockymeza@gmail.com',
     description=__doc__,
     long_description='\n\n'.join([read('README.rst'), read('CHANGES.rst')]),
-    packages=['wifi'],
+    packages=['pyiw'],
     entry_points=entry_points,
     test_suite='tests',
     platforms=["Debian"],

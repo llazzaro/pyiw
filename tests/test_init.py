@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from wifi.scan import Cell
+from pyiw.scan import Cell
 
 class CorrectInitTest(TestCase):
     fields = {"ssid": None,
