@@ -6,7 +6,8 @@ from subprocess import (
     Popen,
     CalledProcessError,
     call,
-    PIPE
+    PIPE,
+    STDOUT
 )
 
 try:

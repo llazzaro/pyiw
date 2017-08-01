@@ -18,5 +18,5 @@ class CorrectInitTest(TestCase):
     def test_empty_init(self):
         tcell = Cell()
 
-        for field, value in self.fields.iteritems():
+        for field, value in self.fields.items():
             self.assertEqual(value, getattr(tcell, field))
