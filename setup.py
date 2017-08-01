@@ -44,10 +44,10 @@ if should_install_cli:
 setup(
     name='pyiw',
     version=version,
-    author='Rocky Meza, Gavin Wahl',
-    author_email='rockymeza@gmail.com',
+    author='Leonardo Lazzaro',  # Original authors: Rocky Meza, Gavin Wahl project was deprecated.
+    author_email='lazzaroleonardo@gmail.com',
     description=__doc__,
-    long_description='\n\n'.join([read('README.rst'), read('CHANGES.rst')]),
+    long_description='Wifi is command that makes it easier to connect the WiFi networks from the command line.',
     packages=['pyiw'],
     entry_points=entry_points,
     test_suite='tests',
