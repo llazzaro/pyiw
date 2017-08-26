@@ -12,6 +12,6 @@ wifi command is also implemented as a library that can be used from Python.
 
 
 .. image:: https://travis-ci.org/llazzaro/pyiw.png?branch=master
-   :target: https://travis-ci.org/llazzaro/wifi
+   :target: https://travis-ci.org/llazzaro/pyiw
 
 The documentation for wifi lives at https://pyiw.readthedocs.org/en/latest/.
